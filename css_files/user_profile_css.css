@@ -1,0 +1,83 @@
+/* Поместите панель навигации внизу страницы и сделайте так, чтобы она прилипала */
+.navbar {
+    background-color: #0e1a2f;
+    overflow: hidden;
+    position: sticky;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+  } 
+  
+  /* Стиль ссылок внутри панели навигации */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 30px;
+    border: solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  /* Изменить цвет ссылок при наведении */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Добавьте цвет к активной / текущей ссылке */
+  .navbar a.active {
+    background-color: #14557d;
+    color: white;
+  }
+  
+  body {
+    margin: 0px;
+    background-color: black;
+  }
+  
+  .footer_info {
+    background-color: black; 
+  }
+  
+  .footer_info p{
+    margin: 0px;
+    color: #ddd;
+    font-size: 20px;
+    height: 40px;
+  }
+
+  .myImg {
+    margin: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+.IMG {
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.object {
+    border: solid white;
+    border-radius: 20px;
+    margin: 30px;
+    width: 800px;
+    height: 400px;
+    column-count: 2;
+}
+
+.info {
+    float: left;
+    width: 400px;
+    margin-top: 25px;
+    color: white;
+    font-size: 25px;
+}
+
+  
