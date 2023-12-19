@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/search.css">
+    script(src="js/search.js", defer) 
+    <title>Искать группу/участника</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/main" class="active">Главная</a>
+        if !has_user
+            <a href="/registration">Создать профиль</a>
+            <a href="/autorization">Войти</a>
+        else 
+            <a href="/account">Профиль</a>
+        <a href="">Город</a>
+        <a href="/search">Найти участника</a>
+        if has_user
+            a#logout(href='/') Выйти из аккаунта
+    </div>
+    <div class="main_div">
+        <form class="parametrs" id='filters'>
+            <p>Выберите роль в группу</p>
+            <aside>
+                <ul id='tool'>
+                    <li>
+                    <input type="checkbox" id="tool-1" name="option1" value="Гитара">
+                    <label for="option1">Гитарист</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="tool-2" name="option2" value="Барабаны">
+                    <label for="option2">Барабанщик</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="tool-3" name="option3" value="Бас-гитара">
+                    <label for="option3">Бас-гитарист</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="tool-4" name="option4" value="Клавиши">
+                    <label for="option1">Клавишник</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="tool-5" name="option5" value="Вокал">
+                    <label for="option1">Вокалист</label>
+                    </li>
+                </ul>
+            </aside>
+            <p>Опыт участника</p>
+            <aside>
+                <ul id='exp'>
+                    <li>
+                    <input type="checkbox" id="exp-1" name="option1" value="5">
+                    <label for="option1"> меньше 5 лет </label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="exp-2" name="option2" value="8">
+                    <label for="option2"> меньше 8</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="exp-3" name="option3" value="100">
+                    <label for="option3"> больше 10 лет</label>
+                    </li>
+                </ul>
+            </aside>
+        </form>
+        <div class="search">
+        if users.length
+            each user in users 
+                <div class="object">
+                    <div class="IMG">
+                        <img class="myImg" src="assets/empty_profile.png">
+                    </div>
+                    <div class="info">
+                        <p>ФИ: #{user.name}</p>
+                        <p>Роль в группе: #{user.musical_instrument}</p>
+                        <p>Возраст: #{user.age}</p>
+                        <p>Город: #{user.city}</p>
+                    </div>
+                </div>
+        else
+             div(style='color: white') Пользователей нет 
+
+    <div class="footer_info">
+        <p>Контакты для связи:</p>
+        <p>Assdad@gmail.ruuu     88005553555</p>
+    </div>
+</body>
+</html>

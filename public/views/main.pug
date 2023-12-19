@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Поиск музыкальных групп</title>
+    script(src="js/main.js", defer) 
+</head>
+<body>
+    <div class="navbar">
+        <a href="/main" class="active">Главная</a>
+        if !has_user
+            <a href="/registration">Создать профиль</a>
+            <a href="/autorization">Войти</a>
+        else 
+            <a href="/account">Профиль</a>
+        <a href="">Город</a>
+        <a href="/search">Найти участника</a>
+        if has_user
+            a#logout(href='#') Выйти из аккаунта
+    </div>
+    <div class="myImg">
+        <img src="assets/orig.jpg">
+    </div>
+    <div class="footer_info">
+        <p>Контакты для связи:</p>
+        <p>Assdad@gmail.ruuu     88005553555</p>
+    </div>
+</body>
+</html>

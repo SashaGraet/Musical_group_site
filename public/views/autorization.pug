@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/autorization.css")
+        script(src="js/autorization.js", defer) 
+    body
+        main.autorization-page
+            section.autorization-page__section.autorization-section
+                form.autorization-form
+                    .autorization-form__input-group.input-group
+                        label.input-description.label-email(for="input-email")
+                        input.input-field#input-email(type="email", placeholder="Введите электронную почту")
+                    .autorization-form__input-group.input-group
+                        label.input-description.label-password(for="input-password") 
+                        input.input-field#input-password(type="password", placeholder="Введите пароль")
+                    .autorization-form__input-group.controls
+                        button.btn-default.controls__btn-submit#log-user-btn(type="submit") Войти

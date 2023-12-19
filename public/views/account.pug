@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/account.css">
+    <title>Ваш профиль</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/main" class="active">Главная</a>
+        if !has_user
+            <a href="/registration">Создать профиль</a>
+            <a href="/autorization">Войти</a>
+        else 
+            <a href="/account">Профиль</a>
+        <a href="">Город</a>
+        <a href="/search">Найти участника</a>
+        if has_user
+            a#logout(href='/') Выйти из аккаунта
+    </div>
+    <div class="main">
+        <div class="profile">
+            <div class="object">
+                <div class="IMG">
+                    <img class="myImg" src="assets/empty_profile.png">
+                </div>
+                <div class="info">
+                    <p>ФИ: #{name}</p>
+                    <p>Роль в группе: #{musical_instrument}</p>
+                    <p>Возраст: #{age}</p>
+                    <p>Город: #{city}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_info">
+        <p>Контакты для связи:</p>
+        <p>Assdad@gmail.ruuu     88005553555</p>
+    </div>
+</body>
+</html>
